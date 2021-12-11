@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React,{useState} from 'react';
+import "./Reactcontact.css"
 
 
 const Reactcontact = () => {
@@ -26,8 +27,8 @@ const Reactcontact = () => {
     if(email&&password&&city&&zip){
 
    
-    const res = await fetch(
-      "https://reactfire-b954e-default-rtdb.firebaseio.com/myreactform.json",
+    const res = 
+    await fetch("https://reactwithfirebase-519cd-default-rtdb.firebaseio.com/mydatabase.json",
       {
         method: "POST",
         headers: {
@@ -62,6 +63,7 @@ const Reactcontact = () => {
 
   return <>
 <div className= "content">
+
     <form >
     
     <div className ="heading"> <h3>INFORMATION FORM</h3></div>
@@ -137,6 +139,7 @@ const Reactcontact = () => {
       <button type="submit" className="btn btn-primary"
         onClick={postData} method="POST">submit</button>
     </form>
+    
     </div>
   </>
 };
